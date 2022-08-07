@@ -9,11 +9,12 @@ function App() {
   )
   
   function handleChange(event) {
-    const {name} = event.target
+    const {name, value} = event.target
     setTasks(prevTask => ({
       ...prevTask,
       [name]: value
     }))
+  
   }
 
   function handleSubmit(event) {
