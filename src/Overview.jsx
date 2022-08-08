@@ -1,19 +1,9 @@
-export default function Overview() {
-
+export default function Overview(props) {
 
 
     return (
         <div>
-            <div className="form">
-                <input 
-                    type="text"
-                    placeholder="Task"
-                    className="form--input"
-                    // name="task"
-                    // value={meme.topText}
-                />
-            </div>
-
+            <p>props.taskName</p>
         </div>
     )
 }

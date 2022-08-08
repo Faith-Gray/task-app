@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Overview from './Overview'
 
 function App() {
   const [tasks, setTasks] = useState(
@@ -30,19 +31,24 @@ function App() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input 
-        type="text"
-        placeholder="Task"
-        className="form--input"
-        name="taskName"
-        onChange={handleChange}
-        value={tasks.taskName}
+    <> 
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="text"
+          placeholder="Task"
+          className="form--input"
+          name="taskName"
+          onChange={handleChange}
+          value={tasks.taskName}
+          key={name}
 
-      />
-      <button>Submit</button>
-    </form>
+        />
+        <button>Submit</button>
+      </form>
+      {Overview}
+    </>
   )
+
 }
 
 export default App
