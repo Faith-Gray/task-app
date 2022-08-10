@@ -3,7 +3,7 @@ export default function Overview(props) {
 
     return (
         <div>
-            <p>props.taskName</p>
+            <ul>props.taskName</ul>
         </div>
     )
 }

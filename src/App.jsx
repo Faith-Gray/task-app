@@ -22,12 +22,6 @@ function App() {
     event.preventDefault()
     
     console.log(tasks)
-
-    // setTasks(prevTask => {
-    //     return prevTask.map((task) => {
-    //         return ...task, task
-    //     })
-    // }) 
   }
 
   return (
@@ -45,7 +39,6 @@ function App() {
         />
         <button>Submit</button>
       </form>
-      {Overview}
     </>
   )
 
@@ -58,3 +51,4 @@ export default App
 // The page will have a form input to put in tasks and a submit button
 //once a task is submitted it will be added to an array of tasks. 
 // The overview component will list all of the tasks and the app component will push the tasks to the page using state.
+
