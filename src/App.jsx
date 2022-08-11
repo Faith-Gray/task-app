@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Overview from './Overview'
+import ToDoList from './ToDoList'
 
 function App() {
   const [tasks, setTasks] = useState(
@@ -37,11 +37,17 @@ function App() {
           key={name}
 
         />
-        <button>Submit</button>
+        <button onClick={handleToggle}>Submit</button>
       </form>
     </>
   )
 
+  const handleToggle = (key) => {
+    let mapped = ToDoList.map(task => {
+      return task.id == key ? { ...task, complete: !task.complete } : { ...task};
+    });
+    setTasks(mapped);
+  }
 }
 
 export default App
